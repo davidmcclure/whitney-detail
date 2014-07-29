@@ -13,7 +13,7 @@ Neatline.module('Vis', function(Vis) {
 
 
     /**
-     * TODO|dev
+     * Initialize the timeline.
      */
     initialize: function() {
 
