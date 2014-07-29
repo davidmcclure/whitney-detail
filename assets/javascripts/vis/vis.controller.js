@@ -19,7 +19,7 @@ Neatline.module('Vis', function(Vis) {
      * Create the view.
      */
     init: function() {
-      this.view = new Neatline.Vis.View();
+      this.view = new Neatline.Vis.View({ el: $('#timeline') });
     }
 
 
