@@ -6,16 +6,12 @@
  * @license     http://www.apache.org/licenses/LICENSE-2.0.html
  */
 
-module.exports = {
+Neatline.module('Vis', function(Vis) {
 
-  options: {
-    paths: ['bower_components']
-  },
 
-  dist: {
-    files: {
-      'style.css': 'assets/stylesheets/style.less'
-    }
-  }
+  Vis.addInitializer(function() {
+    Vis.__controller = new Neatline.Vis.Controller();
+  });
 
-};
+
+});
