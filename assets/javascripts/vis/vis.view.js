@@ -41,9 +41,8 @@ Neatline.module('Vis', function(Vis) {
         {id: 15, group: 3, content: 'Item 15', start: '2014-07-15'},
       ]);
 
-      this.timeline = new vis.Timeline(this.el);
+      this.timeline = new vis.Timeline(this.el, items);
       this.timeline.setGroups(groups);
-      this.timeline.setItems(items);
 
     }
 
