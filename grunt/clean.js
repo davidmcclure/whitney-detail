@@ -7,8 +7,5 @@
  */
 
 module.exports = {
-
-  bower: 'bower_components',
   fonts: 'assets/stylesheets/fonts'
-
 };

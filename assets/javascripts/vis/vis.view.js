@@ -75,7 +75,12 @@ Neatline.module('Vis', function(Vis) {
      * Listen for event highlights.
      */
     _initHighlight: function() {
-      // TODO: Need to implement this in Vis.js.
+
+      // When an event is highlighted.
+      this.timeline.on('dragstart', _.bind(function(args) {
+        console.log(args);
+      }, this));
+
     },
 
 

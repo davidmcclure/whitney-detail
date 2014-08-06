@@ -9,7 +9,7 @@
 module.exports = {
 
   fonts: {
-    src: 'bower_components/bootstrap/fonts/*',
+    src: 'node_modules/bootstrap/dist/fonts/*',
     dest: 'assets/stylesheets/fonts/',
     flatten: true,
     expand: true
