@@ -8,6 +8,10 @@
 
 module.exports = {
 
+  options: {
+    separator: ';'
+  },
+
   dist: {
     dest: 'script.js',
     src: [

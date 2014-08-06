@@ -19,7 +19,8 @@ Neatline.module('Vis', function(Vis) {
       'select',
       'unselect',
 
-      { 'MAP:moveStart': 'minimize' }
+      { 'MAP:moveStart': 'minimize' },
+      { 'MAP:focused': 'center' }
 
     ],
 
@@ -62,6 +63,15 @@ Neatline.module('Vis', function(Vis) {
      */
     minimize: function() {
       this.view.minimize();
+    },
+
+
+    /**
+     * When the map is focused, nudge the viewport to push the centered
+     * content into the middle of the visible viewport.
+     */
+    center: function() {
+      this.view.centerMap();
     }
 
 
