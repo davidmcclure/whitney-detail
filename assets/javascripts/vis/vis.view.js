@@ -9,8 +9,10 @@
 Neatline.module('Vis', function(Vis) {
 
 
-  Vis.View = Backbone.View.extend({
+  Vis.View = Neatline.Shared.Widget.View.extend({
 
+
+    id: 'timeline',
 
     events: {
       'click': 'maximize'
@@ -24,7 +26,7 @@ Neatline.module('Vis', function(Vis) {
     /**
      * Initialize the collection and timeline.
      */
-    initialize: function(options) {
+    init: function(options) {
 
       this.slug = options.slug;
 

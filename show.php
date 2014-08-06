@@ -22,8 +22,5 @@
   <?php echo nl_getExhibitMarkup(); ?>
 </div>
 
-<!-- Vis.js. -->
-<div id="timeline"></div>
-
 <!-- Footer. -->
 <?php echo foot(); ?>
