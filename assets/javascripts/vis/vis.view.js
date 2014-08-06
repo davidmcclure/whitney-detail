@@ -37,6 +37,7 @@ Neatline.module('Vis', function(Vis) {
       this._initHighlight();
       this._initSelect();
       this._initMaximize();
+      this._initMapFocus();
 
     },
 
@@ -108,6 +109,15 @@ Neatline.module('Vis', function(Vis) {
      */
     _initMaximize: function() {
       this.timeline.on('rangechanged', _.bind(this.maximize, this));
+    },
+
+
+    /**
+     * When the timeline is zoomed/panned (whenever the height might change),
+     * pan the map so that the center stays fixed in the visible viewport.
+     */
+    _initMapFocus: function() {
+      this.centerMap(); // TODO|dev
     },
 
 
@@ -287,6 +297,16 @@ Neatline.module('Vis', function(Vis) {
 
       }
 
+    },
+
+
+    /**
+     * Pan the map so that the centroid is moved to the center of the visible
+     * viewport that's not occluded by the timeline.
+     */
+    centerMap: function() {
+      var center = Neatline.request('MAP:getMap').getCenter();
+      // TODO
     },
 
 
