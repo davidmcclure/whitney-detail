@@ -14,6 +14,7 @@ module.exports = {
       'bower_components/nprogress/nprogress.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/vis/dist/vis.js',
+      'bower_components/moment/moment.js',
       'assets/javascripts/**/*.js'
     ]
   }

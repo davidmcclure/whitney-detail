@@ -200,6 +200,7 @@ Neatline.module('Vis', function(Vis) {
     renderSelect: function(model) {
       this.selected = [model.id]
       this.timeline.setSelection(this.selected);
+      this.focusByModel(model);
     },
 
 
@@ -240,7 +241,36 @@ Neatline.module('Vis', function(Vis) {
       Neatline.vent.trigger(event, {
         model: model, source: this.slug
       });
-    }
+    },
+
+
+    // VIEWPORT
+    // ------------------------------------------------------------------------
+
+
+    /**
+     * Center on the model's span in the viewport.
+     *
+     * @param {Object} model
+     */
+    focusByModel: function(model) {
+
+      d1 = moment(model.get('start_date'));
+      d2 = moment(model.get('end_date'));
+
+      // If it's a span.
+      if (d1.isValid() && d2.isValid()) {
+
+        // Compute the viewport boundaries
+        var gutter = d2.diff(d1) * 2;
+        var b1 = d1.subtract(gutter).toISOString();
+        var b2 = d2.add(gutter).toISOString();
+
+        this.timeline.setWindow(b1, b2);
+
+      }
+
+    },
 
 
   });
