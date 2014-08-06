@@ -21,8 +21,18 @@
     background: white;
   }
 
+  .item {
+    background: @color-item;
+    border-color: darken(@color-item, 20%);
+    cursor: pointer
+  }
+
+  .item.selected {
+    background: @color-item-selected;
+    border-color: darken(@color-item-selected, 20%);
+  }
+
   .item.box {
-    cursor: pointer;
     padding: 2px 4px;
     font-size: 0.9em;
   }
@@ -30,11 +40,10 @@
   &.minimized {
 
     margin: 40px;
-    opacity: 0.8;
     .scale(0.4);
 
     &:hover {
-      opacity: 1;
+      outline: 8px solid @color-outline;
     }
 
   }
