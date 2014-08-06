@@ -15,10 +15,10 @@ module.exports = {
   dist: {
     dest: 'script.js',
     src: [
-      'bower_components/nprogress/nprogress.js',
-      'bower_components/bootstrap/dist/js/bootstrap.js',
-      'bower_components/vis/dist/vis.js',
-      'bower_components/moment/moment.js',
+      'node_modules/nprogress/nprogress.js',
+      'node_modules/bootstrap/dist/js/bootstrap.js',
+      'node_modules/vis/dist/vis.js',
+      'node_modules/moment/moment.js',
       'assets/javascripts/**/*.js'
     ]
   }
