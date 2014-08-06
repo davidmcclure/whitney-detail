@@ -9,11 +9,15 @@
 Neatline.module('Vis', function(Vis) {
 
 
-  Vis.bands = [
-    { tag: 'band1', title: 'Band 1' },
-    { tag: 'band2', title: 'Band 2' },
-    { tag: 'band3', title: 'Band 3' }
-  ];
+  Vis.config = {
+
+    //groups: [
+      //{ tag: 'band1', title: 'Band 1' },
+      //{ tag: 'band2', title: 'Band 2' },
+      //{ tag: 'band3', title: 'Band 3' }
+    //]
+
+  };
 
 
 });

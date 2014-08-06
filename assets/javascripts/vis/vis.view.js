@@ -33,6 +33,7 @@ Neatline.module('Vis', function(Vis) {
 
       // Create timeline.
       this._initTimeline();
+      this._initGroups();
       this._initHighlight();
       this._initSelect();
       this._initMaximize();
@@ -41,24 +42,29 @@ Neatline.module('Vis', function(Vis) {
 
 
     /**
-     * Initialize the timeline and groups.
+     * Initialize the timeline.
      */
     _initTimeline: function() {
+      this.timeline = new vis.Timeline(this.el);
+    },
 
-      // Register the bands.
+
+    /**
+     * If defined in the configuration file, register groups.
+     */
+    _initGroups: function() {
+
+      // Break if no groups defined.
+      if (!_.isArray(Vis.config.groups)) return;
+
+      // Create a dataset for the groups.
       var groups = new vis.DataSet();
-      _.each(Vis.bands, function(band) {
+      _.each(Vis.config.groups, function(band) {
         groups.add({ id: band.tag, content: band.title });
       });
 
-      // Spin up the timeline.
-      this.timeline = new vis.Timeline(this.el);
+      // Add to the timeline.
       this.timeline.setGroups(groups);
-
-      // Set display options.
-      //this.timeline.setOptions({
-        //padding: 2
-      //});
 
     },
 
