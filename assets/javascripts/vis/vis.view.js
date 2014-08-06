@@ -258,14 +258,31 @@ Neatline.module('Vis', function(Vis) {
       d1 = moment(model.get('start_date'));
       d2 = moment(model.get('end_date'));
 
-      // If it's a span.
+      // SPAN
       if (d1.isValid() && d2.isValid()) {
 
-        // Compute the viewport boundaries
-        var gutter = d2.diff(d1) * 2;
-        var b1 = d1.subtract(gutter).toISOString();
-        var b2 = d2.add(gutter).toISOString();
+        var p = Vis.config.padding.span;
 
+        // Compute the viewport boundaries
+        var gutter = d2.diff(d1) * p;
+        var b1 = d1.clone().subtract(gutter).toISOString();
+        var b2 = d2.clone().add(gutter).toISOString();
+
+        // Focus the timeline.
+        this.timeline.setWindow(b1, b2);
+
+      }
+
+      // POINT
+      else if (d1.isValid()) {
+
+        var p = Vis.config.padding.point;
+
+        // Compute the viewport boundaries
+        var b1 = d1.clone().subtract(p.value, p.unit).toISOString();
+        var b2 = d1.clone().add(p.value, p.unit).toISOString();
+
+        // Focus the timeline.
         this.timeline.setWindow(b1, b2);
 
       }
