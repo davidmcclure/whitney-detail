@@ -59,7 +59,7 @@ Neatline.module('Vis', function(Vis) {
 
 
     /**
-     * Minimize the timeline when the map is panned.
+     * Minimize the timeline when the map is panned (but not zoomed).
      *
      * @param {Object} event
      */
