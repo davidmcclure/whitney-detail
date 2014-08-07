@@ -36,9 +36,8 @@ Neatline.module('Vis', function(Vis) {
       // Create timeline.
       this._initTimeline();
       this._initGroups();
-      this._initHighlight();
-      this._initSelect();
       this._initMaximize();
+      this._initSelect();
 
     },
 
@@ -48,6 +47,7 @@ Neatline.module('Vis', function(Vis) {
      */
     _initTimeline: function() {
       this.timeline = new vis.Timeline(this.el);
+      this.timeline.setOptions(Vis.config.options);
     },
 
 
@@ -72,15 +72,10 @@ Neatline.module('Vis', function(Vis) {
 
 
     /**
-     * Listen for event highlights.
+     * Maximize when the zoom level is changed.
      */
-    _initHighlight: function() {
-
-      // When an event is highlighted.
-      this.timeline.on('dragstart', _.bind(function(args) {
-        console.log(args);
-      }, this));
-
+    _initMaximize: function() {
+      this.timeline.on('rangechanged', _.bind(this.maximize, this));
     },
 
 
@@ -107,14 +102,6 @@ Neatline.module('Vis', function(Vis) {
 
       }, this));
 
-    },
-
-
-    /**
-     * Maximize when the zoom level is changed.
-     */
-    _initMaximize: function() {
-      this.timeline.on('rangechanged', _.bind(this.maximize, this));
     },
 
 

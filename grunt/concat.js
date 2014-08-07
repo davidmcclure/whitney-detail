@@ -19,7 +19,8 @@ module.exports = {
       'node_modules/bootstrap/dist/js/bootstrap.js',
       'node_modules/vis/dist/vis.js',
       'node_modules/moment/moment.js',
-      'assets/javascripts/**/*.js'
+      'assets/javascripts/**/*.js',
+      'config.js'
     ]
   }
 
