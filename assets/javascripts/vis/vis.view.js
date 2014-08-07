@@ -146,7 +146,7 @@ Neatline.module('Vis', function(Vis) {
         if (end) event['end'] = end;
 
         // Set the group.
-        _.each(Vis.bands, function(band) {
+        _.each(Vis.config.groups, function(band) {
           if (record.hasTag(band.tag)) {
             event['group'] = band.tag;
           }
