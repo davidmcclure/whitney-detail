@@ -20,7 +20,7 @@ module.exports = {
       'node_modules/vis/dist/vis.js',
       'node_modules/moment/moment.js',
       'assets/javascripts/**/*.js',
-      'config.js'
+      'config/*.js'
     ]
   }
 

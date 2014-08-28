@@ -12,11 +12,12 @@ Neatline.module('Vis', function(Vis) {
   Vis.config = {
 
     // Divide records on the timeline into groups, identified by the tags.
-    //groups: [
-      //{ tag: 'band1', title: 'Band 1' },
-      //{ tag: 'band2', title: 'Band 2' },
-      //{ tag: 'band3', title: 'Band 3' }
-    //]
+    groups: [
+      { tag: 'track_travel',  title: 'Travel' },
+      { tag: 'track_events',  title: 'Events' },
+      { tag: 'track_art',     title: 'Art' },
+      { tag: 'track_sites',   title: 'Sites' }
+    ],
 
     padding: {
 
