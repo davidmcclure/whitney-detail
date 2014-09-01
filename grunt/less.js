@@ -13,9 +13,8 @@ module.exports = {
   },
 
   dist: {
-    files: {
-      'style.css': 'assets/stylesheets/style.less'
-    }
+    src: 'assets/stylesheets/style.less',
+    dest: 'style.css'
   }
 
 };

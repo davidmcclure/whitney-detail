@@ -9,9 +9,8 @@
 module.exports = {
 
   dist: {
-    files: {
-      'script.js': '<%= concat.dist.src %>'
-    }
+    src: '<%= concat.dist.src %>',
+    dest: 'script.js'
   }
 
 };

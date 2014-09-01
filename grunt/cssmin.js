@@ -9,9 +9,8 @@
 module.exports = {
 
   dist: {
-    files: {
-      'style.css': 'style.css'
-    }
+    src: 'style.css',
+    dest: 'style.css'
   }
 
 };
