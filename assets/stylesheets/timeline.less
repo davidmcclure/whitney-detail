@@ -1,7 +1,7 @@
 
 /**
  * @package     omeka
- * @subpackage  neatline-NeatLight
+ * @subpackage  whitney-detail
  * @copyright   2014 David McClure
  * @license     http://www.apache.org/licenses/LICENSE-2.0.html
  */
@@ -11,7 +11,7 @@
   position: fixed;
   left: 15vw;
   width: 70vw;
-  top: 0;
+  bottom: 0;
 
   .transform-origin(50% 100%);
   .transition(transform .3s, margin .3s);
@@ -41,12 +41,12 @@
     font-weight: bold;
   }
 
-  &.minimized {
+  &.minimized, &.selected {
 
-    .scale(0.4);
+    .scale(0.3);
 
     &:hover {
-      outline: 8px solid @color-outline;
+      outline: 2px solid @color-outline;
     }
 
   }
