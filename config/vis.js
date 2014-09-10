@@ -35,6 +35,10 @@ Neatline.module('Vis', function(Vis) {
         unit: 'months'
       }
 
+    },
+
+    options: {
+      stack: false
     }
 
   };
