@@ -14,7 +14,7 @@ Neatline.module('Vis', function(Vis) {
     // Divide records on the timeline into groups, identified by the tags.
     groups: [
       { tag: 'track_travel',  title: 'Travel' },
-      { tag: 'daily_life',    title: 'Daily Life' },
+      { tag: 'track_life',    title: 'Daily Life' },
       { tag: 'track_events',  title: 'Events' },
       { tag: 'track_art',     title: 'Art' },
       { tag: 'track_sites',   title: 'Sites' }
