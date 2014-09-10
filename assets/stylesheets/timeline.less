@@ -10,7 +10,7 @@
 
   position: fixed;
   left: 0;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
 
   .transform-origin(0 100%);
@@ -41,13 +41,13 @@
     font-weight: bold;
   }
 
-  &.minimized, &.selected {
+  &.minimized {
 
-    .scale(0.3);
+    .scale(0.4);
     margin: 40px;
 
     &:hover {
-      outline: 2px solid @color-outline;
+      outline: 8px solid @color-outline;
     }
 
   }
