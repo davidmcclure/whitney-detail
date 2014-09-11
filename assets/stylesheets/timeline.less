@@ -21,6 +21,10 @@
     background: white;
   }
 
+  .vlabel {
+    font-weight: bold;
+  }
+
   .item {
     background: @color-item;
     border-color: darken(@color-item, 20%);
@@ -37,8 +41,12 @@
     font-size: 0.9em;
   }
 
-  .vlabel {
-    font-weight: bold;
+  .item.range {
+    z-index: 1;
+  }
+
+  .item.box {
+    z-index: 2;
   }
 
   &.minimized {
