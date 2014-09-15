@@ -25,4 +25,7 @@
   <h1 class="title">The First Sixteen Months</h1>
 </div>
 
+<!-- Zoom. -->
+<div id="zoom"></div>
+
 <?php echo foot(); ?>

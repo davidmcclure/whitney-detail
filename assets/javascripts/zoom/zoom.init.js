@@ -6,6 +6,12 @@
  * @license     http://www.apache.org/licenses/LICENSE-2.0.html
  */
 
-.olControlLayerSwitcher, .olControlPanZoom {
-  display: none;
-}
+Neatline.module('Zoom', function(Zoom) {
+
+
+  Zoom.addInitializer(function() {
+    React.renderComponent(Zoom.Component(), $('#zoom').get(0));
+  });
+
+
+});

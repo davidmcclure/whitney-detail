@@ -26,14 +26,14 @@
   }
 
   .item {
-    background: @color-item;
-    border-color: darken(@color-item, 20%);
+    background: @green;
+    border-color: darken(@green, 20%);
     cursor: pointer
   }
 
   .item.selected {
-    background: @color-item-selected;
-    border-color: darken(@color-item-selected, 20%);
+    background: @red;
+    border-color: darken(@red, 20%);
   }
 
   .item.box, .item.range {
@@ -59,7 +59,7 @@
     margin: 40px;
 
     &:hover {
-      outline: 8px solid @color-outline;
+      outline: 8px solid lighten(black, 20%);
     }
 
   }
