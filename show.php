@@ -19,4 +19,10 @@
   <?php echo nl_getExhibitMarkup(); ?>
 </div>
 
+<!-- Branding. -->
+<div id="branding">
+  <h1 class="brand">Anne Whitney Abroad, 1867-1868</h1>
+  <h1 class="title">The First Sixteen Months</h1>
+</div>
+
 <?php echo foot(); ?>
