@@ -14,7 +14,7 @@ module.exports = {
 
   dist: {
     files: ['assets/**/*', 'config/*', '*.php'],
-    tasks: 'compile'
+    tasks: 'compile:min'
   }
 
 };
