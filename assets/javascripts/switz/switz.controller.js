@@ -25,7 +25,8 @@ Neatline.module('Switz', function(Switz) {
      * @param {Object} args
      */
     select: function(args) {
-      console.log(args);
+      var map = Neatline.Map.__controller.view.layers.wms[217];
+      map.setVisibility(args.model.hasTag('switz'));
     }
 
 

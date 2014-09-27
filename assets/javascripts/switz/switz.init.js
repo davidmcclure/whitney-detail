@@ -9,7 +9,7 @@
 Neatline.module('Switz', function(Switz) {
 
 
-  Switz.addInitializer(function() {
+  Neatline.vent.once('MAP:ingest', function() {
     Switz.__controller = new Neatline.Switz.Controller();
   });
 
