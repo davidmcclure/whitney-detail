@@ -44,7 +44,9 @@ Neatline.module('Vis', function(Vis) {
 
     options: {
       stack: false,
-      zoomMin: 604800000
+      zoomMin: 604800000,
+      min: '1866-01-01',
+      max: '1870-01-01'
     }
 
   };
