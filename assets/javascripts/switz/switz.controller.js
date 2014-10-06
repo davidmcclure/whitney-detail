@@ -20,13 +20,21 @@ Neatline.module('Switz', function(Switz) {
 
 
     /**
+     * Get the Switzerland map.
+     */
+    initialize: function(args) {
+      this.layer = Neatline.Map.__controller.view.layers.wms[217];
+      this.layer.setVisibility(false);
+    },
+
+
+    /**
      * Hide/show the Switzerland map.
      *
      * @param {Object} args
      */
     select: function(args) {
-      var map = Neatline.Map.__controller.view.layers.wms[217];
-      map.setVisibility(args.model.hasTag('switz'));
+      this.setVisibility(args.model.hasTag('switz'));
     }
 
 
