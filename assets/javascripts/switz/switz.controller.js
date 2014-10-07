@@ -22,7 +22,7 @@ Neatline.module('Switz', function(Switz) {
     /**
      * Get the Switzerland map.
      */
-    initialize: function(args) {
+    init: function() {
       this.layer = Neatline.Map.__controller.view.layers.wms[217];
       this.layer.setVisibility(false);
     },
@@ -34,7 +34,8 @@ Neatline.module('Switz', function(Switz) {
      * @param {Object} args
      */
     select: function(args) {
-      this.setVisibility(args.model.hasTag('switz'));
+      this.layer = Neatline.Map.__controller.view.layers.wms[217];
+      this.layer.setVisibility(args.model.hasTag('switz'));
     }
 
 
