@@ -26,6 +26,9 @@
   <p class="tagline">A companion to Jacqueline Marie Musacchio, "<a href="http://www.19thc-artworldwide.org/index.php/autumn14/musacchio-introduction" target="_blank">Mapping the 'White, Marmorean Flock': Anne Whitney Abroad, 1867-1868</a>," Nineteenth-Century Art Worldwide 13, no. 2 (2014).</p>
 </div>
 
+<!-- Bubble. -->
+<div id="static-bubble" class="widget"></div>
+
 <!-- Zoom. -->
 <div id="zoom"></div>
 

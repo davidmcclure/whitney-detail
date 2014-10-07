@@ -6,11 +6,16 @@
  * @license     http://www.apache.org/licenses/LICENSE-2.0.html
  */
 
-.bubble.static {
+#static-bubble {
 
+  display: none;
   left: 80px;
   max-width: 500px;
   .shadow;
+
+  &.bound {
+    display: block;
+  }
 
   &.selected {
     opacity: 1;
